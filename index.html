@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>냥냥 삼총사: 독수리 왕국 대작전</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="eagle" viewBox="0 0 300 240">
+<path d="M118 160 L106 236 L134 220 L150 238 L166 220 L194 236 L182 160Z" fill="#4a3566" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<g class="wing"><path d="M118 96 C84 52 44 44 4 18 C10 60 6 96 22 126 L32 120 L38 150 L54 138 L64 164 L80 150 L94 172 L112 150Z" fill="#6a4a92" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M40 70 C60 76 80 90 96 112 M26 100 C50 104 72 118 86 138" fill="none" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(300 0) scale(-1 1)"><g class="wing"><path d="M118 96 C84 52 44 44 4 18 C10 60 6 96 22 126 L32 120 L38 150 L54 138 L64 164 L80 150 L94 172 L112 150Z" fill="#6a4a92" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M40 70 C60 76 80 90 96 112 M26 100 C50 104 72 118 86 138" fill="none" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/></g></g>
+<ellipse cx="150" cy="140" rx="46" ry="60" fill="#7b57a8" stroke="#2b2230" stroke-width="5"/>
+<path d="M126 128 q8 10 16 0 M158 128 q8 10 16 0 M134 150 q8 10 16 0 M150 150 q8 10 16 0 M142 172 q8 10 16 0" fill="none" stroke="#3b2a5c" stroke-width="4" stroke-linecap="round"/>
+<path d="M130 186 L124 216 M130 186 L136 214 M130 186 L114 208 M170 186 L176 216 M170 186 L164 214 M170 186 L186 208" stroke="#ffb01f" stroke-width="7" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="80" r="40" fill="#fff" stroke="#2b2230" stroke-width="5"/>
+<path d="M120 52 L124 24 L138 42 L150 18 L162 42 L176 24 L180 52Z" fill="#ffcf3f" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><circle cx="150" cy="40" r="6" fill="#e0334a" stroke="#2b2230" stroke-width="3"/>
+<ellipse cx="135" cy="82" rx="9" ry="8" fill="#ffd23f" stroke="#2b2230" stroke-width="3"/><ellipse cx="165" cy="82" rx="9" ry="8" fill="#ffd23f" stroke="#2b2230" stroke-width="3"/>
+<circle cx="137" cy="84" r="4" fill="#2b2230"/><circle cx="163" cy="84" r="4" fill="#2b2230"/>
+<path d="M118 64 L146 78 M182 64 L154 78" stroke="#2b2230" stroke-width="8" stroke-linecap="round"/>
+<path d="M134 94 Q150 84 166 94 Q170 114 152 128 Q151 116 150 108 Q149 116 148 128 Q130 114 134 94Z" fill="#ffb01f" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<path d="M170 98 l12 14 M174 94 l14 10" stroke="#e0334a" stroke-width="4" stroke-linecap="round"/>
+</symbol></defs></svg>
+
+<audio id="bgm" src="audio/bgm.mp3" loop preload="auto"></audio>
+<button class="btn alt" id="music" type="button" aria-label="배경음악 켜기 끄기" aria-pressed="false">🎵</button>
+<button class="btn alt" id="mute" type="button" aria-label="소리 켜기 끄기">🔊</button>
+
+<header class="wrap hero">
+  <div class="scene" aria-hidden="true">
+    <i class="sun"></i>
+    <svg class="rb" viewBox="0 0 800 400"><path d="M50 400 A350 350 0 0 1 750 400" fill="none" stroke="#ff6b6b" stroke-width="14"/><path d="M64 400 A336 336 0 0 1 736 400" fill="none" stroke="#ffa94d" stroke-width="14"/><path d="M78 400 A322 322 0 0 1 722 400" fill="none" stroke="#ffe066" stroke-width="14"/><path d="M92 400 A308 308 0 0 1 708 400" fill="none" stroke="#69db7c" stroke-width="14"/><path d="M106 400 A294 294 0 0 1 694 400" fill="none" stroke="#4dabf7" stroke-width="14"/><path d="M120 400 A280 280 0 0 1 680 400" fill="none" stroke="#9775fa" stroke-width="14"/></svg>
+    <i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i>
+    <svg class="hills h1" viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0 300V150C200 90 400 130 600 150S1000 90 1200 120C1320 135 1400 130 1440 120V300Z" fill="#6fd0c0"/><path d="M0 300V200C240 140 480 200 720 190S1200 140 1440 190V300Z" fill="#7ddc6a"/></svg>
+    <svg class="castle" viewBox="0 0 200 170"><g stroke="#2b2230" stroke-width="4" stroke-linejoin="round"><rect x="70" y="70" width="60" height="90" fill="#ffe3ef"/><path d="M64 70L100 20L136 70Z" fill="#ff6b8b"/><rect x="20" y="100" width="36" height="60" fill="#fff0c9"/><path d="M14 100L38 62L62 100Z" fill="#7c6cf0"/><rect x="144" y="100" width="36" height="60" fill="#fff0c9"/><path d="M138 100L162 62L186 100Z" fill="#7c6cf0"/><path d="M88 160V130a12 12 0 0 1 24 0V160Z" fill="#8a5a3c"/><path d="M100 20V4"/><path d="M100 4L122 10L100 16Z" fill="#ffd23f"/></g></svg>
+    <svg class="hills h2" viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0 300V190C240 130 480 200 720 180S1200 120 1440 190V300Z" fill="#46b54f"/></svg>
+  </div>
+  <svg class="fly" viewBox="0 0 300 240" aria-hidden="true"><use href="#eagle"/></svg>
+  <h1>냥냥 삼총사<br>독수리 왕국 대작전</h1>
+  <p class="lead">왕국의 하늘이 어두워졌어요. 선택받은 세 마리 고양이가 출동합니다!</p>
+  <div class="trio enter" id="trio">
+    <button type="button" class="l" data-c="gru" aria-label="그루"><span class="say"></span><img src="images/gru.png" alt="회색 얼룩 고양이 그루"></button>
+    <button type="button" class="mid" data-c="lulu" aria-label="루루"><span class="say"></span><img src="images/lulu.png" alt="왕관을 쓴 분홍 고양이 루루"></button>
+    <button type="button" class="r" data-c="momo" aria-label="모모"><span class="say"></span><img src="images/momo.png" alt="망토를 두른 노란 고양이 모모"></button>
+  </div>
+  <p class="hint">화면을 한 번 누르면 배경음악이 시작돼요. 고양이를 눌러 보세요. 목소리가 나와요!</p>
+  <div class="btns"><a class="btn" href="#chars">모험 시작</a><button class="btn alt" id="replay" type="button">다시 등장</button></div>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="panel story">
+      <div>
+        <h2>이야기</h2>
+        <p>고양이 왕국은 늘 평화로웠어요. 그런데 어느 날, 커다란 그림자가 하늘을 덮었습니다. 왕관을 쓴 악당 독수리 대왕이 왕국의 보물을 빼앗으러 나타났어요.</p>
+        <p>왕국을 구할 수 있는 건 선택받은 고양이 세 마리뿐. 성격은 제각각이지만, 힘을 합치면 무서울 게 없어요.</p>
+      </div>
+      <div class="eagle" data-c="eagle" tabindex="0" role="button" aria-label="독수리 대왕 소리 듣기">
+        <svg viewBox="0 0 300 240" role="img" aria-label="왕관을 쓴 악당 독수리"><use href="#eagle"/></svg>
+        <h3>독수리 대왕</h3><small>왕국을 위협하는 하늘의 악당</small>
+        <div class="es"><span>위협</span><div class="bar"><i style="width:95%;background:#ff5a5a"></i></div></div>
+        <div class="es"><span>날개힘</span><div class="bar"><i style="width:88%;background:#ff9a3c"></i></div></div>
+        <div class="es"><span>허세</span><div class="bar"><i style="width:100%;background:#b98cf0"></i></div></div>
+        <div class="es"><span>약점</span><div class="bar"><i style="width:60%;background:#7fd3ff"></i></div></div>
+        <small style="margin-top:8px">약점은 고양이들의 우정이래요</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="chars" id="chars">
+    <h2>선택받은 고양이들</h2>
+    <div class="grid">
+      <article class="card" data-c="gru" tabindex="0" role="button">
+        <div class="pic" style="background:#e9e4ea"><img src="images/gru.png" alt="그루"></div>
+        <h3>그루</h3><span class="tag" style="background:#c9c2cb">새침한 츤데레</span>
+        <p>겉으로는 "관심 없거든?" 하고 돌아서지만, 친구가 위험하면 제일 먼저 달려가는 고양이예요. 칭찬받으면 귀가 빨개져요.</p>
+        <div class="q" style="border-color:#9a9298">"흥, 너희가 걱정돼서 온 거 아니야."</div>
+        <div class="stat"><span>공격</span><div class="bar"><i style="width:85%;background:#8f8792"></i></div></div>
+        <div class="stat"><span>속도</span><div class="bar"><i style="width:70%;background:#8f8792"></i></div></div>
+        <div class="stat"><span>솔직함</span><div class="bar"><i style="width:25%;background:#8f8792"></i></div></div>
+        <span class="listen">🔊 목소리 듣기</span>
+      </article>
+      <article class="card" data-c="lulu" tabindex="0" role="button">
+        <div class="pic" style="background:#fde6ee"><img src="images/lulu.png" alt="루루"></div>
+        <h3>루루</h3><span class="tag" style="background:var(--lulu)">공주병 고양이</span>
+        <p>예쁜 건 뭐든 좋아하고, 모두가 자기를 공주님으로 모셔야 직성이 풀려요. 리본이 흐트러지면 전투도 잠깐 멈춥니다.</p>
+        <div class="q" style="border-color:var(--lulu)">"나는 공주니까 당연히 가장 앞에서 반짝여야지!"</div>
+        <div class="stat"><span>매력</span><div class="bar"><i style="width:100%;background:#f08cab"></i></div></div>
+        <div class="stat"><span>마법</span><div class="bar"><i style="width:80%;background:#f08cab"></i></div></div>
+        <div class="stat"><span>체력</span><div class="bar"><i style="width:40%;background:#f08cab"></i></div></div>
+        <span class="listen">🔊 목소리 듣기</span>
+      </article>
+      <article class="card" data-c="momo" tabindex="0" role="button">
+        <div class="pic" style="background:#fff2d0"><img src="images/momo.png" alt="모모"></div>
+        <h3>모모</h3><span class="tag" style="background:var(--momo)">정의로운 수호자</span>
+        <p>도움이 필요한 곳엔 언제나 모모가 있어요. 방패와 망토로 친구들을 지키고, 항상 모두를 먼저 생각합니다.</p>
+        <div class="q" style="border-color:var(--momo)">"걱정 마, 내 뒤에 있으면 안전해!"</div>
+        <div class="stat"><span>방어</span><div class="bar"><i style="width:95%;background:#f0b13c"></i></div></div>
+        <div class="stat"><span>용기</span><div class="bar"><i style="width:90%;background:#f0b13c"></i></div></div>
+        <div class="stat"><span>우정</span><div class="bar"><i style="width:100%;background:#f0b13c"></i></div></div>
+        <span class="listen">🔊 목소리 듣기</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="duel">
+    <h2>결전 직전</h2>
+    <div class="arena" id="arena">
+      <i class="moon"></i><i class="cl cl1"></i><i class="cl cl2"></i><i class="cl cl3"></i>
+      <svg class="lb l" viewBox="0 0 40 100" aria-hidden="true"><path d="M24 0L8 46H20L10 100L34 36H22L32 0Z" fill="#fff3a8" stroke="#ffd24a" stroke-width="2"/></svg>
+      <svg class="lb r" viewBox="0 0 40 100" aria-hidden="true"><path d="M24 0L8 46H20L10 100L34 36H22L32 0Z" fill="#fff3a8" stroke="#ffd24a" stroke-width="2"/></svg>
+      <svg class="boss" data-a="eagle" viewBox="0 0 300 240" role="img" aria-label="날개를 펼친 독수리 대왕"><use href="#eagle"/></svg>
+      <svg class="hillfar" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100V50C60 30 120 60 200 44S340 30 400 52V100Z" fill="#2a1240"/></svg>
+      <svg class="castle" viewBox="0 0 200 90" aria-hidden="true"><path d="M0 90V60H14V44L22 36L30 44V60H48V30L60 18L72 30V56H90V40H110V56H128V30L140 18L152 30V60H170V44L178 36L186 44V60H200V90Z" fill="#1a0d2b"/><g fill="#ffb347"><rect x="56" y="38" width="6" height="9"/><rect x="136" y="38" width="6" height="9"/><rect x="20" y="48" width="5" height="7"/><rect x="175" y="48" width="5" height="7"/><rect x="96" y="46" width="5" height="7"/></g></svg>
+      <div class="wind"><i></i><i></i><i></i></div>
+      <div class="embers"><i style="left:8%;animation-delay:-0s;animation-duration:6s"></i><i style="left:20%;animation-delay:-2s;animation-duration:7s"></i><i style="left:33%;animation-delay:-4s;animation-duration:5.5s"></i><i style="left:47%;animation-delay:-1s;animation-duration:6.5s"></i><i style="left:60%;animation-delay:-3s;animation-duration:7s"></i><i style="left:72%;animation-delay:-5s;animation-duration:6s"></i><i style="left:85%;animation-delay:-2.5s;animation-duration:5.5s"></i><i style="left:93%;animation-delay:-4.5s;animation-duration:7s"></i></div>
+      <svg class="cliff" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100V40L30 33L60 41L92 30L132 38L182 28L232 36L282 30L332 38L372 31L400 40V100Z" fill="#150a24" stroke="#2b2230" stroke-width="2"/></svg>
+      <div class="cats"><svg class="pc gru" data-a="gru" viewBox="0 0 200 230" role="img" aria-label="회색 고양이 그루의 뒷모습"><defs><clipPath id="hgru"><path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z"/><path d="M46 58L46 10L90 34Z"/><path d="M154 58L154 10L110 34Z"/></clipPath><clipPath id="bgru"><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z"/></clipPath></defs>
+<g class="tail" style="transform-origin:148px 205px"><path d="M148 205C198 210 206 150 178 122" pathLength="100" fill="none" stroke="#2b2230" stroke-width="30" stroke-linecap="round"/><path d="M148 205C198 210 206 150 178 122" pathLength="100" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/><path d="M148 205C198 210 206 150 178 122" pathLength="100" fill="none" stroke="#9a9298" stroke-width="20" stroke-linecap="round" stroke-dasharray="0 58 42"/></g>
+<path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><g clip-path="url(#bgru)"><path d="M104 140L170 130L170 230L110 230Z" fill="#9a9298"/></g><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="74" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><ellipse cx="126" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+
+<path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M46 58L46 10L90 34Z" fill="#fff"/><path d="M154 58L154 10L110 34Z" fill="#fff"/>
+<g clip-path="url(#hgru)"><path d="M101 20L172 30L172 124L120 118C108 90 100 60 101 20Z" fill="#9a9298"/></g>
+<path d="M45 58L46 10L90 34M155 58L154 10L110 34" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M45 58C42 62 42 66 42 72C42 102 66 114 100 114C134 114 158 102 158 72C158 66 158 62 155 58M92 32C97 30 103 30 108 32" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<path d="M38 78L18 72M38 88L18 92M162 78L182 72M162 88L182 92" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/>
+</svg><svg class="pc momo" data-a="momo" viewBox="0 0 200 230" role="img" aria-label="노란 고양이 모모의 뒷모습"><defs><clipPath id="hmomo"><path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z"/><path d="M46 58L46 10L90 34Z"/><path d="M154 58L154 10L110 34Z"/></clipPath><clipPath id="bmomo"><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z"/></clipPath></defs>
+<g class="tail" style="transform-origin:150px 208px"><path d="M150 208C194 204 200 164 178 136" pathLength="100" fill="none" stroke="#2b2230" stroke-width="30" stroke-linecap="round"/><path d="M150 208C194 204 200 164 178 136" pathLength="100" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/><path d="M150 208C194 204 200 164 178 136" pathLength="100" fill="none" stroke="#f7c768" stroke-width="20" stroke-linecap="round" stroke-dasharray="0 58 42"/></g>
+<path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><g clip-path="url(#bmomo)"><path d="M100 130L172 130L172 230L100 230Z" fill="#f7c768"/></g><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="74" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><ellipse cx="126" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<g class="cape" style="transform-origin:100px 112px"><path d="M58 112C80 122 120 122 142 112C170 140 190 170 198 198C178 200 164 192 150 208C132 196 116 210 100 200C86 210 70 200 58 206C52 170 54 140 58 112Z" fill="#e5646a" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M100 124V200M76 122L64 200M124 122L150 196M142 130L176 188" stroke="#b8404c" stroke-width="4" stroke-linecap="round" fill="none"/></g><path d="M54 108C78 122 122 122 146 108L148 120C122 134 78 134 52 120Z" fill="#c9444f" stroke="#2b2230" stroke-width="4" stroke-linejoin="round"/>
+<path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M46 58L46 10L90 34Z" fill="#fff"/><path d="M154 58L154 10L110 34Z" fill="#fff"/>
+<g clip-path="url(#hmomo)"><path d="M99 20L172 20L172 124L110 120C122 88 98 60 99 20Z" fill="#f7c768"/></g>
+<path d="M45 58L46 10L90 34M155 58L154 10L110 34" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M45 58C42 62 42 66 42 72C42 102 66 114 100 114C134 114 158 102 158 72C158 66 158 62 155 58M92 32C97 30 103 30 108 32" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<path d="M38 78L18 72M38 88L18 92M162 78L182 72M162 88L182 92" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/>
+</svg><svg class="pc lulu" data-a="lulu" viewBox="0 0 200 230" role="img" aria-label="분홍 고양이 루루의 뒷모습"><defs><clipPath id="hlulu"><path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z"/><path d="M46 58L46 10L90 34Z"/><path d="M154 58L154 10L110 34Z"/></clipPath><clipPath id="blulu"><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z"/></clipPath></defs>
+<g class="tail" style="transform-origin:52px 205px"><path d="M52 205C8 208 2 156 26 128" pathLength="100" fill="none" stroke="#2b2230" stroke-width="30" stroke-linecap="round"/><path d="M52 205C8 208 2 156 26 128" pathLength="100" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/><path d="M52 205C8 208 2 156 26 128" pathLength="100" fill="none" stroke="#f4a6bf" stroke-width="20" stroke-linecap="round" stroke-dasharray="0 58 42"/></g>
+<path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><g clip-path="url(#blulu)"><path d="M108 108L172 108L172 230L116 230C124 180 100 150 108 108Z" fill="#f4a6bf"/></g><path d="M46 222C36 172 48 120 100 110C152 120 164 172 154 222Z" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<ellipse cx="74" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><ellipse cx="126" cy="216" rx="27" ry="12" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<g stroke="#2b2230" stroke-width="4" stroke-linejoin="round"><path d="M98 150C78 128 52 136 58 156C62 172 84 168 98 150Z" fill="#f7a6c4"/><path d="M102 150C122 128 148 136 142 156C138 172 116 168 102 150Z" fill="#f7a6c4"/><path d="M98 156L82 198L98 187Z" fill="#ee86ab"/><path d="M102 156L118 198L102 187Z" fill="#ee86ab"/><circle cx="100" cy="153" r="9" fill="#ff6f9f"/></g>
+<path d="M42 72C42 42 62 30 100 30C138 30 158 42 158 72C158 102 134 114 100 114C66 114 42 102 42 72Z" fill="#fff" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M46 58L46 10L90 34Z" fill="#fff"/><path d="M154 58L154 10L110 34Z" fill="#fff"/>
+<g clip-path="url(#hlulu)"><path d="M103 20L172 20L172 124L112 120C122 90 96 62 103 20Z" fill="#f4a6bf"/></g>
+<path d="M45 58L46 10L90 34M155 58L154 10L110 34" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/><path d="M45 58C42 62 42 66 42 72C42 102 66 114 100 114C134 114 158 102 158 72C158 66 158 62 155 58M92 32C97 30 103 30 108 32" fill="none" stroke="#2b2230" stroke-width="5" stroke-linejoin="round"/>
+<path d="M38 78L18 72M38 88L18 92M162 78L182 72M162 88L182 92" stroke="#2b2230" stroke-width="4" stroke-linecap="round"/>
+<g stroke="#2b2230" stroke-width="4" stroke-linejoin="round"><path d="M76 36L80 12L92 26L100 6L108 26L120 12L124 36Z" fill="#ffe9a8"/><circle cx="100" cy="27" r="4" fill="#e0334a"/></g></svg></div>
+      <div class="ptitle"><small>왕국의 운명을 건 단 한 번의 싸움</small>결전의 하늘</div>
+      <div class="pcap">선택받은 고양이 셋, 하늘의 악당 하나</div>
+      <div class="bolt"></div>
+      <div class="fight" aria-hidden="true">결전 개시!</div>
+    </div>
+    <div class="dlg" aria-live="polite"><b>대치</b><span>스크롤해서 이 장면에 들어오면 대화가 시작돼요.</span></div>
+    <div class="btns"><button class="btn alt" id="duelPlay" type="button">다시 보기</button></div>
+  </section>
+
+  <section>
+    <div class="panel cta">
+      <h2>세 고양이와 함께 출격할 준비됐나요?</h2>
+      <p>게임은 곧 문을 엽니다.</p>
+      <a class="btn" href="#top" onclick="window.scrollTo({top:0});return false">처음으로</a>
+    </div>
+  </section>
+</main>
+<footer>© 냥냥 삼총사</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
